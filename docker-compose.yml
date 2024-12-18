@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: nestjs-mongoDB
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - nestjs_mongoDB:/data/db
+
+volumes:
+  nestjs_mongoDB:
